@@ -6,11 +6,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home - Poma</title>
 
-    <link rel="stylesheet" href="./styles/general.css">
-    <link rel="stylesheet" href="./styles/nav.css">
-    <link rel="stylesheet" href="./styles/footer.css">
-
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+      ::-webkit-scrollbar {
+        width: 0.5em;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background-color: #630000;
+        border-radius: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background-color: rgb(40, 40, 40);
+      }
+
+      body {
+        margin: 0;
+        font-size: 1rem;
+        background-color: #f2e7e1;
+        font-family: "poppins";
+
+        width: 100%;
+        height: 100vh;
+      }
+
+      nav {
+        margin: 2em;
+        display: flex;
+        justify-content: space-between;
+      }
+      nav ul {
+        display: flex;
+        list-style: none;
+      }
+      nav li {
+        margin: 0em 1em;
+      }
+      nav a {
+        text-decoration: none;
+        color: black;
+      }
+
+      div.logo {
+        margin: 1em 0;
+      }
+
+      div.acct {
+        margin: 1em 0;
+        width: 19%;
+      }
+      div.acct a {
+        margin: 0 1em;
+        padding: 1em;
+      }
+
+      div.acct #register {
+        margin: 0;
+        color: white;
+        background-color: #630000;
+        border-radius: 8px;
+      }
 
       section.first {
         display: flex;
@@ -179,18 +236,18 @@
         height: 45vh;
       }
 
-      .floating-div{
+      .floating-div {
         display: flex;
         justify-content: space-around;
 
         background-color: transparent;
 
         position: absolute;
-        
+
         transform: translate(-0%, -20%);
       }
 
-      .floating-div div{
+      .floating-div div {
         width: 30%;
         border-radius: 12px;
         background-color: #e5cec2;
@@ -199,8 +256,39 @@
         padding: 1.6em;
       }
 
-      
+      footer {
+        height: 40vh;
+        background-color: #630000;
+        text-align: center;
+      }
+      footer ul {
+        display: flex;
+        list-style: none;
+        width: 50%;
+        margin: auto;
+        padding: 2em 0;
+      }
+      footer li {
+        margin: auto;
+      }
+      footer a {
+        text-decoration: none;
+        color: white;
+      }
 
+      .foot-icons {
+        display: flex;
+        list-style: none;
+        width: 16%;
+        margin: auto;
+        padding: 2em 0;
+      }
+      .foot-icons li {
+        margin: 1em;
+      }
+      .foot-icons img {
+        width: 100%;
+      }
     </style>
   </head>
   <body>
@@ -318,7 +406,6 @@
         </div>
       </section>
       <section class="seventh">
-        
         <div class="floating-div">
           <div>
             <img src="./Images/call-calling.svg" />
@@ -342,25 +429,32 @@
             </p>
           </div>
         </div>
-
       </section>
     </main>
 
     <footer>
-        <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Resource</a></li>
-            <li><a href="#">Team</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Terms</a></li>
-        </ul>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Resource</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Terms</a></li>
+      </ul>
 
-        <ul class="foot-icons">
-            <li><a href="#"><img src="./Images/akar-icons_instagram-fill.png"></a></li>
-            <li><a href="#"><img src="./Images/et_facebook.png"></a></li>
-            <li><a href="#"><img src="./Images/twitter.png"></a></li>
-            <li><a href="#"><img src="./Images/clarity_email-line.png"></a></li>
-        </ul>
+      <ul class="foot-icons">
+        <li>
+          <a href="#"><img src="./Images/akar-icons_instagram-fill.png" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="./Images/et_facebook.png" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="./Images/twitter.png" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="./Images/clarity_email-line.png" /></a>
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

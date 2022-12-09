@@ -6,11 +6,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profile - Poma</title>
 
-    <link rel="stylesheet" href="./styles/general.css" />
-    <link rel="stylesheet" href="./styles/nav.css" />
-    <link rel="stylesheet" href="./styles/footer.css" />
-
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+      ::-webkit-scrollbar {
+        width: 0.5em;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background-color: #630000;
+        border-radius: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background-color: rgb(40, 40, 40);
+      }
+
+      body {
+        margin: 0;
+        font-size: 1rem;
+        background-color: #f2e7e1;
+        font-family: "poppins";
+
+        width: 100%;
+        height: 100vh;
+      }
+
+      nav {
+        margin: 2em;
+        display: flex;
+        justify-content: space-between;
+      }
+      nav ul {
+        display: flex;
+        list-style: none;
+      }
+      nav li {
+        margin: 0em 1em;
+      }
+      nav a {
+        text-decoration: none;
+        color: black;
+      }
+
+      div.logo {
+        margin: 1em 0;
+      }
+
+      div.acct {
+        margin: 1em 0;
+        width: 19%;
+      }
+      div.acct a {
+        margin: 0 1em;
+        padding: 1em;
+      }
+
+      div.acct #register {
+        margin: 0;
+        color: white;
+        background-color: #630000;
+        border-radius: 8px;
+      }
+
       div.photo {
         background-image: url(./Images/profile/lucian-moldovan-1mpYnNXHeHA-unsplash.jpg);
         background-repeat: no-repeat no-repeat;
@@ -48,7 +106,7 @@
         margin-left: 25%;
       }
 
-      main{
+      main {
         display: flex;
         /* justify-content: space-around; */
       }
@@ -78,7 +136,7 @@
         width: 80%;
       }
 
-      div.profile-card img {
+      div.profile-card #profile-picture {
         width: 120px;
         height: 120px;
         border-radius: 50%;
@@ -104,7 +162,7 @@
         color: #630000;
       }
 
-      .forms-item-container{
+      .forms-item-container {
         margin: 1em;
         width: 50%;
         overflow-y: scroll;
@@ -117,38 +175,97 @@
 
         border-radius: 8px;
       }
-      .form-item p{
+      .form-item p {
         margin: 0.5em;
       }
-      .form-title{
+      .form-title {
         font-weight: 600;
-        border-bottom:1px solid #302f2c;
+        border-bottom: 1px solid #302f2c;
       }
 
-      .form-item-options{
+      .form-item-options {
         display: flex;
         font-size: 12px;
         font-weight: 500;
       }
 
-      .notifications-container{
+      .notifications-container {
         margin: 1em;
         width: 20%;
       }
-      .greeting{
+      .greeting {
         text-align: center;
-        background-color: #F5F5F5;
+        background-color: #f5f5f5;
         border-radius: 8px;
 
         padding: 1em;
       }
+
+      footer {
+        height: 40vh;
+        background-color: #630000;
+        text-align: center;
+      }
+      footer ul {
+        display: flex;
+        list-style: none;
+        width: 50%;
+        margin: auto;
+        padding: 2em 0;
+      }
+      footer li {
+        margin: auto;
+      }
+      footer a {
+        text-decoration: none;
+        color: white;
+      }
+
+      .foot-icons {
+        display: flex;
+        list-style: none;
+        width: 16%;
+        margin: auto;
+        padding: 2em 0;
+      }
+      .foot-icons li {
+        margin: 1em;
+      }
+      .foot-icons img {
+        width: 100%;
+      }
+
+      
+      .property {
+        display: flex;
+        padding: 0em 1.5em;
+        width: 80%;
+      }
     </style>
   </head>
   <body>
-    <div class="photo">
-      <div>
-        <a href="#">Home</a>
+    <nav>
+      <div class="logo">
+        <a href="#"><img src="./Images/Poma Logo 1.png" /></a>
       </div>
+
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Our Services</a></li>
+        <li><a href="#">Templates</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Contact us</a></li>
+      </ul>
+
+      <div class="acct">
+        <a id="login" href="#">Log in</a>
+        <a id="register" href="#">Registration</a>
+      </div>
+    </nav>
+    <div class="photo">
+      <!-- <div>
+        <a href="#">Home</a>
+      </div> -->
     </div>
     <div class="navigate">
       <div>
@@ -169,10 +286,23 @@
             <p id="email">johndoe@gmail.com</p>
           </div>
 
-          <p id="occupation">Marketer</p>
-          <p id="location">Lagos, Nigeria</p>
-          <p id="web-address">www.johnmarket.com</p>
-          <p id="joined">April, 2022</p>
+          <div class="property">
+            <img src="./Images/profile/portfolio 1.png" />
+            <p id="occupation">Marketer</p>
+          </div>
+          <div class="property">
+            <img src="./Images/profile/marker-02.png" />
+            <p id="location">Lagos, Nigeria</p>
+          </div>
+          <div class="property">
+            <img src="./Images/profile/globe-03.png" />
+            <p id="web-address">www.johnmarket.com</p>
+          </div>
+
+          <div class="property">
+            <img src="./Images/profile/calendar-01.png" />
+            <p id="joined">April, 2022</p>
+          </div>
 
           <div>
             <button type="button" id="update-btn">Update</button>
@@ -181,27 +311,30 @@
       </div>
 
       <div class="forms-item-container">
-
         <div class="form-item">
-            <p class="form-title">Form Title</p>
-            <p class="form-description">Form Description</p>
+          <p class="form-title">Form Title</p>
+          <p class="form-description">Form Description</p>
 
-            <div class="form-item-options">
-                <p>(90) Viewed</p>
-                <p>(69) Submitted</p>
+          <div class="form-item-options">
+            <div class="property">
+              <img src="./Images/profile/eye-open.png" />
+              <p>(90) Viewed</p>
             </div>
+            <div class="property">
+              <img width="24px" height="24px" src="./Images/profile/edit-contained.png" />
+              <p>(69) Submitted</p>
+            </div>
+            
+          </div>
         </div>
-
       </div>
 
       <div class="notifications-container">
         <div class="greeting">
-            <p>Hi John!</p>
-            <img src="./Images/profile/greeting-illustration.png">
+          <p>Hi John!</p>
+          <img src="./Images/profile/greeting-illustration.png" />
         </div>
-
-
-    </div>
+      </div>
     </main>
 
     <footer>
